@@ -206,3 +206,66 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Footer -------------------------------- */
+
+.footer {
+  width: 100%;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  background: var(--bg);
+}
+
+.footer-inner {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;         /* nav-container, .container와 동일 */
+  padding: 1rem 1.25rem 2rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--sub-text);
+}
+
+.footer-link {
+  text-decoration: none;
+  color: var(--sub-text);
+  white-space: nowrap;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Footer 반응형 */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;   /* 로고랑 마찬가지로 왼쪽 정렬 유지 */
+    gap: 0.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-copy {
+    white-space: normal;      /* 좁은 화면에서는 줄바꿈 허용 */
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-inner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .footer-copy {
+    line-height: 1.6;
+  }
+}
